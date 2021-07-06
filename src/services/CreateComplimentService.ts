@@ -15,7 +15,7 @@ class CreateComplimentService{
         const complimentsRepository = getCustomRepository(ComplimentsRepository)
         const usersRepository = getCustomRepository(UsersRepository)
 
-        const userReceiverExists = await usersRepository.findOne(user_receiver)
+        const userReceiverExists = await usersRepository.findOne(user_receiver);
 
         //não é permitido um usuário cadastrar um elogio para si
         if(user_sender === user_receiver){
